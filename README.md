@@ -29,9 +29,9 @@ $ ssh elife@prod--search--2.elife.internal
 
 ## Available hostnames
 
-Projects that use a single server always have a `{env}--{project}.elife.internal` DNS entry e.g. `prod--alfred.elife.internal`.
+Projects that use a single server always have a `{env}--{subdomain}.elife.internal` DNS entry e.g. `prod--alfred.elife.internal`.
 
-Projects that use multiple servers behind a load balancer must opt in to internal DNS using the `ec2.dns-internal` configuration. This will result in them having DNS of the form `{env}--{project}--{node}.elife.internal` e.g. `prod--search--1.elife.internal`.
+Projects that use multiple servers behind a load balancer must opt in to internal DNS using the `ec2.dns-internal` configuration. This will result in them having DNS of the form `{env}--{subdomain}--{node}.elife.internal` e.g. `prod--search--1.elife.internal`.
 
 ## Permanent setup
 
