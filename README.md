@@ -26,3 +26,20 @@ From the `bastion` server, you can use internal DNS to reach single servers even
 $ ssh elife@prod--search--1.elife.internal
 $ ssh elife@prod--search--2.elife.internal
 ```
+
+## Permanent setup
+
+If you want to save some typing, add this to your `~/.ssh/config` file:
+```
+Host bastion
+    Hostname bastion.elifesciences.org
+    User elife
+    ForwardAgent yes
+```
+
+Now you can just type:
+```
+ssh bastion
+```
+
+to access the server.
