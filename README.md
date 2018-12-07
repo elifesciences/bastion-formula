@@ -35,17 +35,21 @@ Projects that use multiple servers behind a load balancer must opt in to interna
 
 ## Permanent setup
 
-If you want to save some typing, add this to your `~/.ssh/config` file:
+You can SSH into servers in a single command without having to go to the bastion:
+
+```
+ssh staging--xpub--1
+```
+
+To SSH into servers in a single command, add this to your `~/.ssh/config` file:
 ```
 Host bastion
     Hostname bastion.elifesciences.org
     User elife
     ForwardAgent yes
+    
+Host *--*--*
+  IdentityFile ~/.ssh/elife
+  User elife
+  ProxyCommand ssh bastion nc %h.elife.internal %p
 ```
-
-Now you can just type:
-```
-ssh bastion
-```
-
-to access the server.
