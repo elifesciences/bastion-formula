@@ -38,7 +38,7 @@ Projects that use multiple servers behind a load balancer must opt in to interna
 You can SSH into servers in a single command without having to go to the bastion:
 
 ```
-ssh staging--xpub--1
+ssh prod--journal--1
 ```
 
 To SSH into servers in a single command, add this to your `~/.ssh/config` file:
