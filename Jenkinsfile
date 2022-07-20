@@ -1,1 +1,1 @@
-elifeFormula('bastion', '', null, ['s2004'])
+elifeFormula('bastion')
